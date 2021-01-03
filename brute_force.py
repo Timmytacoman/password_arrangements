@@ -1,8 +1,11 @@
 import string
 import itertools
+import time
 
-LENGTH = 2
+START_TIME = time.time()
+LENGTH = 3
 CHARS = string.printable[:-6]
+print(f"CHARS: {CHARS}")
 print(f"CHARS length: {len(CHARS)}")
 
 counter = 0
@@ -15,3 +18,5 @@ for i in arrangements:
     counter += 1
 file.close()
 print(len(arrangements))
+END_TIME = time.time()
+print(f"Elapsed time: {END_TIME - START_TIME}")
